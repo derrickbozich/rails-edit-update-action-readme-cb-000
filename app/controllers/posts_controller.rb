@@ -25,7 +25,7 @@ class PostsController < ApplicationController
 
 	def update
 		@post = Post.find_by_id(params[:id])
-		@post.update(:title = params[:title],:description = params[:description] )
+		@post.update(title: params[:title],description: params[:description] )
 		
 
 	end
