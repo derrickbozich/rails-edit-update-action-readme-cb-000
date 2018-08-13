@@ -18,4 +18,15 @@ class PostsController < ApplicationController
 	  @post.save
 	  redirect_to post_path(@post)
 	end
+
+	def edit
+		@post = Post.find_by_id(params[:id])
+	end
+
+	def update
+		@post = Post.find_by_id(params[:id])
+		@post.title = params[:title]
+		@post.description = params[:description]
+
+	end
 end
